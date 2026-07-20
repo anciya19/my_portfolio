@@ -1,0 +1,151 @@
+.about {
+    padding: 10px 8%;
+    background: #fff4e6;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+/* LEFT */
+
+.skills-circle {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.center-circle {
+    width: 180px;
+    height: 180px;
+    background: #ff9800;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+
+.center-circle h2 {
+    font-size: 28px;
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    color:#ff9800;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.icon:hover{
+    transform:scale(1.1);
+    background:#ff9800;
+    color:white;
+}
+
+/* ICONS */
+
+.icon1{top:0;left:50%;transform:translateX(-50%);}
+.icon2{top:45px;right:30px;}
+.icon3{top:50%;right:0;transform:translateY(-50%);}
+.icon4{bottom:45px;right:30px;}
+.icon5{bottom:0;left:50%;transform:translateX(-50%);}
+.icon6{bottom:45px;left:30px;}
+.icon7{top:50%;left:0;transform:translateY(-50%);}
+.icon8{top:45px;left:30px;}
+.icon9{top:110px;right:80px;}
+.icon10{bottom:110px;left:80px;}
+
+/* RIGHT */
+
+.about-right{
+    flex:1;
+}
+
+.section-title{
+    font-size:48px;
+    color:#ff9800;
+    margin-bottom:5px;
+}
+.about-divider{
+  width:84%;
+  margin:25px auto 0;
+  border:none;
+  border-top:1px solid #d8d8d8;
+}
+.about-text{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.about-info{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid #ccc;
+    padding-top:25px;
+    gap:40px;
+}
+
+.about-info p{
+    margin-bottom:14px;
+    font-size:17px;
+}
+
+.about-info span{
+    color:#ff9800;
+    font-weight:600;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.about-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.skills-circle{
+    width:330px;
+    height:330px;
+}
+
+.center-circle{
+    width:140px;
+    height:140px;
+}
+
+.center-circle h2{
+    font-size:22px;
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    font-size:28px;
+}
+
+.about-info{
+    flex-direction:column;
+    align-items:center;
+}
+}

@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+        CONTACT SECTION
+=========================== */
+
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff4e6 0%, #ffffff 55%, #ffe4bd 100%);
+  padding: 80px 8%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 55px;
+  align-items: center;
+}
+
+/* ===========================
+        LEFT SIDE
+=========================== */
+
+.contact-left {
+  padding: 30px;
+}
+
+.small-title {
+  display: inline-block;
+  background: white;
+  color: #ff9800;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.15);
+}
+
+
+.contact-left h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-left p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ===========================
+        SOCIAL CARDS
+=========================== */
+
+.connect-cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connect-card {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: .35s;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.connect-card::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: .15;
+}
+
+.gmail-card::before {
+  background: #ea4335;
+}
+
+.linkedin-card::before {
+  background: #0077b5;
+}
+
+.connect-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.15);
+}
+
+.connect-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 34px;
+  z-index: 2;
+}
+
+.gmail-card .connect-icon {
+  color: #ea4335;
+}
+
+.linkedin-card .connect-icon {
+  color: #0077b5;
+}
+
+.connect-card h3 {
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.connect-card p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ===========================
+        FORM CARD
+=========================== */
+
+.contact-container {
+  background: rgba(255,255,255,.95);
+  border-radius: 25px;
+  padding: 45px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+.contact-container h2 {
+  text-align: center;
+  color: #ff9800;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+/* ONLY FORM LABELS */
+
+.contact-container label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ONLY FORM INPUTS */
+
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: .3s;
+  font-family: inherit;
+}
+
+.contact-container input:focus,
+.contact-container select:focus,
+.contact-container textarea:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 4px rgba(255,152,0,.12);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.phone-row {
+  display: flex;
+  gap: 15px;
+}
+
+.phone-row select {
+  width: 190px;
+}
+
+.phone-row input {
+  flex: 1;
+}
+
+.contact-container textarea {
+  resize: none;
+}
+
+/* ===========================
+        SUBMIT BUTTON
+=========================== */
+
+.contact-submit-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#ff9800,#ff7a00);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255,152,0,.35);
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.contact-wrapper{
+    grid-template-columns:1fr;
+}
+
+.contact-left{
+    text-align:center;
+}
+
+.connect-cards{
+    align-items:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-section{
+    padding:40px 5%;
+}
+
+.contact-container{
+    padding:25px;
+}
+
+.row,
+.phone-row{
+    flex-direction:column;
+}
+
+.phone-row select{
+    width:100%;
+}
+
+.connect-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.contact-left h1{
+    font-size:36px;
+}
+
+.contact-submit-btn{
+    font-size:16px;
+}
+
+}
+
+/* ===========================
+   LINK STYLING FOR EMAIL CARD
+=========================== */
+
+.connect-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.connect-card:visited {
+  color: inherit;
+}
+
+.connect-card:hover {
+  color: inherit;
+}
+
+.connect-card:active {
+  color: inherit;
+}
+
+.connect-card:focus {
+  outline: none;
+}

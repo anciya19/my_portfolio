@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.career-container {
+  width: 100%;
+  padding: 90px 8%;
+  background: #fff4e6;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+        SECTION TITLE
+=========================== */
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  color: #ff9800;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+.education-title {
+  margin-top: 140px;
+}
+
+/* ===========================
+        TIMELINE
+=========================== */
+
+.timeline {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ffb84d;
+  transform: translateX(-50%);
+}
+
+/* ===========================
+        TIMELINE ITEM
+=========================== */
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: -40px;
+}
+
+.timeline-item.left {
+  left: 0;
+  padding-right: 70px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 70px;
+}
+
+/* Card Position */
+
+.timeline-item:nth-child(2) {
+  margin-top: 0;
+}
+
+.timeline-item:nth-child(3) {
+  margin-top: -10px;
+}
+
+.timeline-item:nth-child(4) {
+  margin-top: 0;
+}
+
+/* ===========================
+          SINGLE DOT
+=========================== */
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  width: 22px;
+  height: 22px;
+  background: #ff9800;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.left::after {
+  right: -11px;
+}
+
+.right::after {
+  left: -11px;
+}
+
+/* ===========================
+          CARD
+=========================== */
+
+.content {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  min-height: 260px;
+  border-left: 6px solid #ff9800;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(255, 152, 0, 0.3);
+}
+
+/* ===========================
+      CARD POINTER
+=========================== */
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.left .content::before {
+  right: -16px;
+  border-width: 12px 0 12px 16px;
+  border-color: transparent transparent transparent white;
+}
+
+.right .content::before {
+  left: -16px;
+  border-width: 12px 16px 12px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* ===========================
+        TAG
+=========================== */
+
+.card-tag {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+          TEXT
+=========================== */
+
+.content h2 {
+  color: #222;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.content h4 {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.content ul {
+  padding-left: 22px;
+}
+
+
+.content li {
+  color: #444;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+@media screen and (max-width: 900px) {
+
+  .timeline::before {
+    left: 25px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px;
+    padding-right: 0;
+    margin-top: 0 !important;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item::after {
+  left: 14px;
+  right: auto;
+}
+
+  .left .content::before,
+  .right .content::before {
+    left: -16px;
+    right: auto;
+    border-width: 12px 16px 12px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .content {
+    min-height: auto;
+  }
+
+  .education-title {
+    margin-top: 80px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+}
