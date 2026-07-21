@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles/Hero.css";
 import Img from "../assets/anciya_professional_photo.jpeg";
 
-const Hero = () => {
-  const words = ["ANCIYA R", "Skilled Python Programmer"];
+/* Move the array outside the component */
+const words = ["ANCIYA R", "Skilled Python Programmer"];
 
+const Hero = () => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -15,17 +16,19 @@ const Hero = () => {
 
     const timer = setTimeout(() => {
       if (!deleting) {
-        setText(currentWord.substring(0, text.length + 1));
+        const updatedText = currentWord.substring(0, text.length + 1);
+        setText(updatedText);
 
-        if (text === currentWord) {
+        if (updatedText === currentWord) {
           setTimeout(() => setDeleting(true), 1200);
         }
       } else {
-        setText(currentWord.substring(0, text.length - 1));
+        const updatedText = currentWord.substring(0, text.length - 1);
+        setText(updatedText);
 
-        if (text === "") {
+        if (updatedText === "") {
           setDeleting(false);
-          setWordIndex((wordIndex + 1) % words.length);
+          setWordIndex((prev) => (prev + 1) % words.length);
         }
       }
     }, speed);
@@ -46,11 +49,8 @@ const Hero = () => {
 
   return (
     <section className="hero-section" id="home">
-
       <div className="hero-content">
-
         <div className="hero-left">
-
           <p className="hello-text">Hello, I'm</p>
 
           <h1 className="hero-name">{text}</h1>
@@ -60,7 +60,6 @@ const Hero = () => {
           </h2>
 
           <div className="hero-stats">
-
             <div
               className="stat-box"
               onClick={() => scrollToSection("projects")}
@@ -76,11 +75,9 @@ const Hero = () => {
               <h3>2</h3>
               <p>Completed Certifications</p>
             </div>
-
           </div>
 
           <div className="hero-buttons">
-
             <button
               className="talk-btn"
               onClick={() => scrollToSection("contact")}
@@ -94,25 +91,19 @@ const Hero = () => {
             >
               My Works
             </button>
-
           </div>
-
         </div>
 
         <div className="hero-right">
-
-          <div className="hexagon">
-            <img src={Img} alt="Professional Profile" />
+          <div className="hexagon-border">
+            <div className="hexagon">
+              <img src={Img} alt="Professional Profile" />
+            </div>
           </div>
-
         </div>
-
       </div>
 
-      {/* Divider */}
-
       <hr className="hero-divider" />
-
     </section>
   );
 };
