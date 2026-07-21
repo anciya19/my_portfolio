@@ -324,3 +324,29 @@
 .connect-card:focus {
   outline: none;
 }
+
+.contact-form-message {
+  margin-top: 18px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-form-message.success {
+  color: #146c2e;
+  background-color: #e8f7ed;
+  border: 1px solid #a9dfb8;
+}
+
+.contact-form-message.error {
+  color: #b42318;
+  background-color: #fff0ee;
+  border: 1px solid #f3b4ad;
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
