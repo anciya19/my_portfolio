@@ -11,6 +11,7 @@ const Skills = () => {
         "CSS3",
         "JavaScript (ES6)",
         "React.js",
+        "MUI",
       ],
     },
     {
@@ -20,7 +21,7 @@ const Skills = () => {
         "Python",
         "Django",
         "REST APIs",
-        "Backend Logic",
+        "FastAPI",
       ],
     },
     {
@@ -28,9 +29,7 @@ const Skills = () => {
       date: "Storage",
       technologies: [
         "SQL",
-        "MongoDB",
-        "Database Design",
-        "CRUD Operations",
+        "MongoDB"
       ],
     },
     {
@@ -38,8 +37,8 @@ const Skills = () => {
       date: "Development",
       technologies: [
         "Git",
-        "VS Code",
-        "TensorFlow",
+        "GitHub",
+        "VS Code",        
         "Google Cloud Platform",
       ],
     },
